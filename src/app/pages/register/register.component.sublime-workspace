@@ -1,0 +1,286 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"size",
+				"font-size"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"Pant",
+				"pant1"
+			],
+			[
+				"cold",
+				"col-md-6"
+			],
+			[
+				"col",
+				"col-md-6"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pa",
+		"selected_items":
+		[
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"sql",
+				"Set Syntax: SQL"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/javdo/AppData/Roaming/npm-cache/_logs/2017-08-08T19_36_31_336Z-debug.log",
+		"/D/Desarrollo/VePorEl_Front/node_modules/ng2-currency-mask/src/currency-mask.directive.js",
+		"/D/Desarrollo/VePorEl_Front/package.json",
+		"/C/Users/javdo/Downloads/Ecommerce/starrr-gh-pages/index.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			".register-page .container",
+			"file",
+			"lista",
+			"cities",
+			".jpg",
+			"uniforme1",
+			"Portfolio",
+			"portfolio",
+			"Portfolio",
+			"portfolio",
+			"Portfolio",
+			"rgba",
+			"f6bf01",
+			"fec503",
+			"fed136",
+			"hover",
+			"png",
+			"class='starrr'",
+			"starrr",
+			"href",
+			"$ 50.000",
+			"starrr",
+			"16px",
+			"FFD119",
+			"<div class=\"col-md-6 col-sm-6\">\n\t\t\t\t\t\t\t<h4 ",
+			"10",
+			"col-md-4",
+			"png",
+			"opacity: 0;",
+			".png",
+			"Pantalón 1",
+			"<div>",
+			"po-item",
+			"item",
+			"portfolio",
+			"\n\n\t",
+			"\n",
+			"\n\t\t\t",
+			"\n\n       ",
+			"\n    \n   ",
+			"\n",
+			">",
+			"<",
+			"page-scroll",
+			"selection",
+			"src=\"img/portfolio/",
+			"<h4>Pantaló",
+			"<div>",
+			".min",
+			"agency",
+			"portfolio-caption",
+			"</p>",
+			"/h4>",
+			"Pantaón",
+			"<h4>",
+			"<h4>Ro",
+			"png",
+			"head",
+			"<",
+			">",
+			"business the ",
+			".",
+			"\n\n",
+			".",
+			"\n\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "register.component.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"currency",
+				"node_modules\\ng2-currency-mask\\src\\currency-mask.directive.js"
+			],
+			[
+				"bootra",
+				"vendor\\bootstrap\\css\\bootstrap.css"
+			],
+			[
+				"bootstrap.min.css",
+				"vendor\\bootstrap\\css\\bootstrap.min.css"
+			],
+			[
+				"bootstrap.mi",
+				"vendor\\bootstrap\\css\\bootstrap.min.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 313.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,94 @@
+
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" (submit)="create()">
+                        <div class="card-header card-header-text" data-background-color="rose">
+                            <h4 class="card-title">Información del Banner</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Nombre</label>
+                                                <input type="text" required class="form-control" name="name" [(ngModel)]="bannerSelected.name">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Página de destino</label>
+                                                <input type="text" required class="form-control" name="amount" [(ngModel)]="bannerSelected.url_destination">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">País</label>
+                                                <select id="country_id" name="country_id"  (change)="changeContry($event)" title="País">
+                                                    <option value="{{country.id}}" *ngFor="let country of countries">{{country.name}}</option>
+                                                </select>
+                                                <span class="help-block">País donde se encuentra la sucursal.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Departamento</label>
+                                                <select id="departament_id" name="departament_id" (change)="changeDepartament($event)" title="Departamento">
+                                                    <option value="{{departament.id}}" *ngFor="let departament of departaments">{{departament.name}}</option>
+                                                </select>
+                                                <span class="help-block">Departamento donde se encuentra la sucursal.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Ciudad</label>
+                                                <select id="city_id" name="city_id" [(ngModel)]="bannerSelected.cities" title="Ciudad">
+                                                    <option value="{{city.name}}" *ngFor="let city of cities">{{city.name}}</option>
+                                                </select>
+                                            </div>
+                                        </div> 
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Fin del Banner</label>
+                                                <input type="text" class="form-control datetimepicker" name="finishDate" id="finishDate" [(ngModel)]="bannerSelected.finish">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="wizard-container">
+                                        <div class="wizard-card" style="box-shadow: none; min-height: inherit">
+                                            <div class="picture-container">
+                                                <div class="picture">
+                                                    <img src="assets/img/default-avatar.png"
+                                                    class="picture-src" id="photo-preview"
+                                                    title=""/>
+                                                    <input type="file" required name="photo" id="photo" [(ngModel)]="bannerSelected.photo">
+                                                </div>
+                                                <h6>Escoger Imagen promocional</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group form-button">
+                                        <button type="submit" class="btn btn-fill btn-rose">Crear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

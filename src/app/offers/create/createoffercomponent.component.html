@@ -1,0 +1,102 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" (submit)="create()">
+                        <div class="card-header card-header-text" data-background-color="rose">
+                            <h4 class="card-title">Información de la oferta</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <div class="col-lg-10">
+                                    <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Nombre</label>
+                                            <input type="text" required class="form-control" name="name" [(ngModel)]="offer.name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group label-floating">
+                                            <label class="control-label">Cantidad disponible en cada sucursal</label>
+                                            <input type="text" required class="form-control" name="amount" [(ngModel)]="offer.amount">
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="row">
+                                        <div class="col-lg-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Precio normal</label>
+                                                <input type="text" required currencyMask [options]="{ thousands: '.', precision: '0', align:'left'}" class="form-control" name="regular_price" [(ngModel)]="offer.regular_price">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Precio VePorEl</label>
+                                                <input type="text" required currencyMask [options]="{ thousands: '.', precision: '0', align:'left'}" class="form-control" name="precio" [(ngModel)]="offer.price">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Ahorro</label>
+                                                <input type="text" readonly currencyMask [options]="{ thousands: '.', precision: '0', align:'left'}" class="form-control" name="ahorro" [(ngModel)]="offer.regular_price-offer.price">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Inicio de la oferta</label>
+                                                <input type="text" class="form-control datetimepicker" name="start" id="start" [(ngModel)]="offer.start">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group label-floating">
+                                                <label class="control-label">Fin de la Oferta <br>(las ofertas tienen una vigencia máxima de 8 días)</label>
+                                                <input type="text" class="form-control datetimepicker" name="finish" id="finish" [(ngModel)]="offer.finish">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                            </div>
+                                </div>
+                                <div class="col-lg-2">
+                                    <div class="wizard-container">
+                                        <div class="wizard-card" style="box-shadow: none; min-height: inherit">
+                                            <div class="picture-container">
+                                                <div class="picture">
+                                                    <img src="assets/img/default-avatar.png"
+                                                         class="picture-src" id="photo-preview"
+                                                         title=""/>
+                                                    <input type="file" required name="photo" id="photo" [(ngModel)]="offer.photo">
+                                                </div>
+                                                <h6>Escoger Imagen promocional</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label">Sucursales</label>
+                                        <select class="bootstrap-select" required id="branchs"  name="branchs" data-actions-box="true" title="Sucursales" multiple [(ngModel)]="offer.branchs_offer">
+                                            <option value="{{branch.id}}"  *ngFor="let branch of branchs">{{branch.name}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group form-button">
+                                        <button type="submit" class="btn btn-fill btn-rose">Crear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

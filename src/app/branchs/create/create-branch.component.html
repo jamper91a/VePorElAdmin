@@ -1,0 +1,99 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <form method="get" action="/" class="form-horizontal">
+                        <div class="card-header card-header-text" data-background-color="rose">
+                            <h4 class="card-title">Información de la sucursal</h4>
+                        </div>
+                        <div class="card-content">
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">País</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label"></label>
+                                        <select id="country_id" name="country_id"  (change)="changeContry($event)" title="País">
+                                            <option value="{{country.id}}" *ngFor="let country of countries">{{country.name}}</option>
+                                        </select>
+                                        <span class="help-block">País donde se encuentra la sucursal.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Departamento</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label"></label>
+                                        <select id="departament_id" name="departament_id" (change)="changeDepartament($event)" title="Departamento">
+                                            <option value="{{departament.id}}" *ngFor="let departament of departaments">{{departament.name}}</option>
+                                        </select>
+                                        <span class="help-block">Departamento donde se encuentra la sucursal.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Ciudad</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating">
+                                        <label class="control-label"></label>
+                                        <select id="city_id" name="city_id" [(ngModel)]="branch.city_id" title="Ciudad">
+                                            <option value="{{city.id}}" *ngFor="let city of cities">{{city.name}}</option>
+                                        </select>
+                                        <span class="help-block">Ciudad donde se encuentra la sucursal.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Nombre</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control" placeholder="Nombre de la sucursal" name="name" [(ngModel)]="branch.name">
+                                        <span class="help-block">Ejemplo: MiNegocio Centro Comercial</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Dirección</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" class="form-control" placeholder="Dirección" name="address" [(ngModel)]="branch.address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Telefono</label>
+                                <div class="col-sm-10">
+                                    <div class="form-group label-floating is-empty">
+                                        <label class="control-label"></label>
+                                        <input type="text" placeholder="Telefono"  class="form-control" name="telephone" [(ngModel)]="branch.telephone">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-sm-2 label-on-left">Ubicación</label>
+                                <div class="col-sm-10">
+                                <label class="col-sm-6 label-on-right">Por Favor Seleccione en el Mapa la Ubicación de su Negocio</label>
+                                <br>
+                                    <div class="form-group label-floating is-empty">
+                                        <div id="regularMap" class="map"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-md-2"></label>
+                                <div class="col-md-10">
+                                    <div class="form-group form-button">
+                                        <button type="submit" (click)="create()" class="btn btn-fill btn-rose">Crear</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

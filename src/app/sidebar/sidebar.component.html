@@ -1,0 +1,171 @@
+
+
+<div class="logo">
+    <div class="logo-normal">
+        <div class="simple-text">
+            VePorEl
+        </div>
+    </div>
+
+    <div class="logo-img">
+        <img src="assets/img/isotipo.png"/>
+    </div>
+</div>
+
+
+<div class="sidebar-wrapper">
+
+    <div class="user">
+        <div class="photo">
+            <img src="{{util.url}}{{user.company[0].url_photo}}" />
+        </div>
+        <div class="info">
+            <a data-toggle="collapse" href="#collapseExample" class="collapsed">
+                <span>
+                    {{user.names}}
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="nav-container">
+        <div id="menuGroup">
+            <ul class="nav">
+                <li routerLinkActive="active"  *ngIf="group != 1">
+                    <a data-toggle="collapse" class="closeable" href="#branchsExample">
+                        <i class="material-icons">apps</i>
+                        <p>Sucursales
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="branchsExample">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[1].path]">
+                                    <span class="sidebar-mini">C</span>
+                                    <span class="sidebar-normal">{{menuItems[1].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[2].path]">
+                                    <span class="sidebar-mini">L</span>
+                                    <span class="sidebar-normal">{{menuItems[2].title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li routerLinkActive="active" *ngIf="group != 1">
+                    <a data-toggle="collapse" class="closeable" href="#offertsExample">
+                        <i class="material-icons">apps</i>
+                        <p>Ofertas
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="offertsExample">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[3].path]">
+                                    <span class="sidebar-mini">C</span>
+                                    <span class="sidebar-normal">{{menuItems[3].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[4].path]">
+                                    <span class="sidebar-mini">L</span>
+                                    <span class="sidebar-normal">{{menuItems[4].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[5].path]">
+                                    <span class="sidebar-mini">R</span>
+                                    <span class="sidebar-normal">{{menuItems[5].title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li routerLinkActive="active" *ngIf="group != 1">
+                    <a data-toggle="collapse" class="closeable" href="#bannersExample">
+                        <i class="material-icons">apps</i>
+                        <p>Banners
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="bannersExample">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[6].path]">
+                                    <span class="sidebar-mini">C</span>
+                                    <span class="sidebar-normal">{{menuItems[6].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[7].path]">
+                                    <span class="sidebar-mini">L</span>
+                                    <span class="sidebar-normal">{{menuItems[7].title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li routerLinkActive="active" *ngIf="group != 1">
+                    <a data-toggle="collapse" class="closeable" href="#shopExample">
+                        <i class="material-icons">apps</i>
+                        <p>Compras
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="shopExample">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[11].path]">
+                                    <span class="sidebar-mini">C</span>
+                                    <span class="sidebar-normal">{{menuItems[11].title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li routerLinkActive="active" *ngIf="group == 1">
+                    <a data-toggle="collapse" class="closeable" href="#adminExample">
+                        <i class="material-icons">apps</i>
+                        <p>Administrar
+                            <b class="caret"></b>
+                        </p>
+                    </a>
+                    <div class="collapse" id="adminExample">
+                        <ul class="nav">
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[8].path]">
+                                    <span class="sidebar-mini">C</span>
+                                    <span class="sidebar-normal">{{menuItems[8].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[9].path]">
+                                    <span class="sidebar-mini">O</span>
+                                    <span class="sidebar-normal">{{menuItems[9].title}}</span>
+                                </a>
+                            </li>
+                            <li routerLinkActive="active">
+                                <a  [routerLink]="[menuItems[10].path]">
+                                    <span class="sidebar-mini">B</span>
+                                    <span class="sidebar-normal">{{menuItems[10].title}}</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- </div> -->
+                <li routerLinkActive="active" style="width: 260px; bottom: 19px; position: fixed;">
+                    <a data-toggle="collapse"  href="#"  (click)="closeSession()" >
+                        <i class="material-icons">apps</i>
+                        <p>Cerrar Sesión
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

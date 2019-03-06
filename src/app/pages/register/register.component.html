@@ -1,0 +1,329 @@
+<style type="text/css">
+.logotipo-img{
+    position: absolute;
+    width: 130px;
+    margin-top: 80px;
+}
+.isotipo-img{
+    position: absolute;
+    padding-left: 20px;
+    width: 220px;
+}
+.logo-normal{
+    position: absolute;
+    padding-top: 50px;
+    font-size: 10px;
+    margin-left: 87px;
+}
+@media screen and (max-width: 767px) {
+    .logotipo-img{
+        display: none;
+    }
+    .logo-normal{
+        display: none;
+    }
+    .isotipo-img{
+        width: 220px;
+        margin-top: -8px;
+    }
+}
+</style>
+<div class="wrapper wrapper-full-page">
+    <nav class="navbar navbar-primary navbar-transparent navbar-absolute">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-example">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="logo">
+                    <div class="logo-img" >
+                        <img class="isotipo-img" src="assets/img/logotipoveporel_whitte.png">
+                    </div>
+                    <div class="logo-normal">
+                        <h3 style="font-weight: 400;">Negocios</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="menu-example">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class=" active ">
+                        <a href="pages/register">
+                            <i class="material-icons">person_add</i> Registrar Negocio
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="pages/login">
+                            <i class="material-icons">fingerprint</i> Iniciar Sesión
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="full-page register-page" filter-color="black" data-image="assets/img/register.jpeg">
+        <div class="container">
+            <div class="main-content">
+                <div class="container-fluid">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <!--      Wizard container        -->
+                        <div class="wizard-container">
+                            <div class="card wizard-card" data-color="rose" id="wizardProfile">
+                                <form method="post" action="/">
+                                    <!--        You can switch " data-color="purple" "  with one of the next bright colors: "green", "orange", "red", "blue"       -->
+                                    <div class="wizard-header">
+                                        <h3 class="wizard-title">
+                                            Crear tu perfil
+                                        </h3>
+                                        <h5>Esta información nos permitirá validar que eres el responsable del
+                                        negocio</h5>
+                                    </div>
+                                    <div class="wizard-navigation">
+                                        <ul>
+                                            <li>
+                                                <a href="#about" data-toggle="tab">Contacto</a>
+                                            </li>
+                                            <li>
+                                                <a href="#account" data-toggle="tab">Negocio</a>
+                                            </li>
+                                            <!-- <li>
+                                                <a href="#address" data-toggle="tab">Legal</a>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="about">
+                                            <div class="row">
+                                                <h4 class="info-text"> Información básica</h4>
+
+                                                <div class="col-lg-12 col-lg-offset-1">
+                                                    <div class="col-lg-5">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">email</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label">Email
+                                                                    <small>(Requerido)</small>
+                                                                </label>
+                                                                <input name="username" [(ngModel)]="user.username" type="email" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-5">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">fingerprint</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label">Contraseña
+                                                                    <small>(requerida)</small>
+                                                                </label>
+                                                                <input name="password" [(ngModel)]="user.password" type="password" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-lg-offset-0">
+                                                    <div class="col-lg-4">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">face</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label">Nombres
+                                                                    <small>(Requerido)</small>
+                                                                </label>
+                                                                <input name="names" [(ngModel)]="user.names" type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">record_voice_over</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label">Apellidos
+                                                                    <small>(Requerido)</small>
+                                                                </label>
+                                                                <input name="last_name" [(ngModel)]="user.last_name" type="text" class="form-control">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-4">
+                                                        <div class="input-group">
+                                                            <span class="input-group-addon">
+                                                                <i class="material-icons">phone</i>
+                                                            </span>
+                                                            <div class="form-group label-floating">
+                                                                <label class="control-label">Teléfono o Celular
+                                                                    <small>(Requerido)</small>
+                                                                </label>
+                                                                <input name="cellphone" [(ngModel)]="user.cellphone" type="tel" class="form-control">
+                                                                <small>
+                                                                    Recuerde incluir los indicativos correspondientes a su país y ciudad
+                                                                </small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane" id="account">
+                                            <h4 class="info-text"> Información autorizada a PUBLICAR del negocio </h4>
+                                            <div class="row">
+                                                <div class="col-sm-4 col-sm-offset-1">
+                                                    <div class="picture-container" style="margin-top: 70%">
+                                                        <div class="picture">
+                                                            <img src="../../assets/img/default-avatar.png"
+                                                            class="picture-src" id="photo-preview"
+                                                            title=""/>
+                                                            <input required accept="image/gif, image/jpeg, image/png" type="file" title="Imagen" name="photo" id="photo" (change)="readURL($event)">
+                                                        </div>
+                                                        <h6>Escoger Logo</h6>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-6">
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">business</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Nombre o Razón Social
+                                                                <small>(Requerido)</small>
+                                                            </label>
+                                                            <input required name="name" [(ngModel)]="company.name" type="text" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">phone</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Teléfono de atención al Cliente
+                                                                <small>(Requerido)</small>
+                                                            </label>
+                                                            <input required name="phone" [(ngModel)]="company.cellphone" type="tel" class="form-control">
+                                                            <small>
+                                                                Recuerde incluir los indicativos correspondientes a su país y ciudad
+                                                            </small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">message</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Pagina Web
+                                                                <small>(Opcional)</small>
+                                                            </label>
+                                                            <input name="webpage" [(ngModel)]="company.webpage" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <hr />
+                                                    <div>
+                                                        <small>Los Siguientes Datos solo Estarán Visibles para las Compañias con Suscripción</small>
+                                                        
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">motorcycle</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <div class="checkbox">
+                                                                <label style="color: color: #aaa;">
+                                                                    <input type="checkbox" [(ngModel)]="company.domicilios" name="domicilio">
+                                                                    Marque si maneja domicilios
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">email</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">E-mail Exclusivo para Atención al Cliente
+                                                                <small>(Requerido)</small>
+                                                            </label>
+                                                            <input required name="email" [(ngModel)]="company.email" type="email" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">message</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">FanPage
+                                                            </label>
+                                                            <input name="fanpage" [(ngModel)]="company.fanpage" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-addon">
+                                                            <i class="material-icons">message</i>
+                                                        </span>
+                                                        <div class="form-group label-floating">
+                                                            <label class="control-label">Descripción
+                                                                <small>(Opcional, 160 max carácteres)</small>
+                                                            </label>
+                                                            <textarea maxlength="160" rows="4" class="form-control" name="description"  [(ngModel)]="company.description">
+                                                            </textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="select_subcategories">
+                                                <div class="info-text">Escoge los productos o servicios que tu negocio ofrece 
+                                                    <br>
+                                                    <small>
+                                                        (Puede digitar la categoria que desea buscar en la parte superior de la lista)
+                                                    </small>
+                                                </div> 
+                                                <div class="col-lg-10 col-lg-offset-1">
+                                                    <select class="" id="categories"  name="categories" title="Productos o Servicios" multiple [(ngModel)]="company.categories" >
+                                                        <optgroup label="{{category.name}}" *ngFor="let category of categories">
+                                                            <option value="{{subcategory.name}}" *ngFor="let subcategory of category.subcategories">{{subcategory.name}}</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wizard-footer">
+                                        <div class="pull-right">
+                                            <input type='button' class='btn btn-next btn-fill btn-rose btn-wd'
+                                            name='next' value='Siguiente'/>
+                                            <input (click)="finish()" type='submit' class='btn btn-finish btn-fill btn-rose btn-wd'
+                                            name='finish' value='Finalizar'/>
+                                        </div>
+                                        <div class="pull-left">
+                                            <input type='button' class='btn btn-previous btn-fill btn-default btn-wd'
+                                            name='previous' value='Anterior'/>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- wizard container -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container" style="min-height: 0px">
+
+                <p class="copyright pull-right">
+                    &copy;
+                    {{test | date: 'yyyy'}}
+                    <a href="#">Colombia Apps</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</div>
